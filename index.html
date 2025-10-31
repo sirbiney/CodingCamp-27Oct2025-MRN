@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <Header>
+        <h1>Todo List Website - MRN</h1> 
+    </Header>
+
+    <Main>
+        <!-- Form Section -->
+        <section>
+            <form class="flex">
+                <input type="text" id="todo-input" placeholder="Enter your todo..." maxlength="25">
+                <input type="date" id="date-input">
+            </form>
+            <button type="button" onclick="addTodo()" id="add-todo-btn">Add Todo</button>
+        </section>
+       
+        <!-- Action Section -->
+        <section class="action-buttons">
+            <button onclick="clearAllTodos()" id="clear-all-btn">Clear All Todos</button>
+            <button onclick="filterTodos('all')" id="filter-btn">Filter Tools</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="todo-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>TASK</th>
+                        <th>DUE DATE</th>
+                        <th>ACTIONS</th>
+                    </tr>
+                </thead>
+                <tbody id="todo-list">
+                    <!-- Todos will be added here by JavaScript -->
+                </tbody>
+            </table>
+            <div id="empty-message">No tasks found</div>
+        </section>
+    </Main>
+    
+    <Footer>
+        <p>&copy; 2025 Todo List Website - MRN</p>        
+    </Footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
